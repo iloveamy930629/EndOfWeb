@@ -68,22 +68,20 @@ const Page2 = ({
             </CButton>
             {body.bigsections.map((section, sectionIndex) => {
               return (
-                <CInputGroup key={sectionIndex}>
+                <CInputGroup key={sectionIndex} className="my-2">
                   <CInputGroupText>
-                    <i class="bi bi-layout-text-window-reverse"></i>
+                    <i className="bi bi-layout-text-window-reverse"></i>
                   </CInputGroupText>
-                  <textarea
+                  <CFormControl
                     data-for="subtitle"
                     data-tip="子段落標題"
                     placeholder="Subtitle*"
                     name="subtitle"
                     value={section.subtitle}
                     onChange={(e) => handleSubtitleChange(e, bodyIndex, sectionIndex)}
-                    cols="75"
-                    rows="1.5"
                   />
-                  <ReactTooltip id="subtitle" place="top" type="dark" effect="solid" />{' '}
-                  {/* 游標滑過去出現的框框，用id認 */}
+                  <ReactTooltip id="subtitle" place="top" type="dark" effect="solid" />
+
                   <CButton
                     type="button"
                     name="bigsection"
